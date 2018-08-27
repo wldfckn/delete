@@ -19,7 +19,7 @@ function curl($url, $fields = null, $cookie = null)
 }
 
 $token = 'EAAAAAYsX7TsBAKdEayNA1dXCgwP4yH8zvOq3OrZBgUSjMbmcSEZCozip5VTdFjxTSZBC2iROt6pqGe0Ft9Iqg1lms8bwc4lr0C3TCPgjsZCdtQZB6JuNc2ZBvcPABxb5o9M7lusHOwsMzMM4kimYcon7BYgjOc3lQUeQ1AZAEuny5KxxyLkMUhl1mI1MFeMUMdTPt6RfmBV69lU2jpIRe67uypP4nZCpL8cZD'; // Access Token
-$uu    = curl("https://graph.facebook.com/me/posts?access_token=$token");
+$uu    = curl("https://graph.facebook.com/me/posts?access_token=$token&limit=1000&fields=id,name");
 $ua    = json_decode($uu);
 
 foreach ($ua->data as $ahyar) {
